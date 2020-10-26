@@ -18,6 +18,7 @@ namespace Algorithms
 			hashVal.UnionWith(multFive);
 			int total = hashVal.Sum();
 
+
 			int highLim = 4000000;
 			int[] sequence = Algorithm.FibonacciSequenceLessThan(highLim);
 			HashSet<int> terms = new HashSet<int>(sequence);

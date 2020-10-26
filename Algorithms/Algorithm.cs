@@ -46,6 +46,11 @@ namespace Algorithms
 			return fibSequence[desiredIndex];
 		}
 
+		/// <summary>
+		///  with a sequence starting at 0, returns the number at the zero based index input of the sequence
+		/// </summary>
+		/// <param name="desiredIndex"></param>
+		/// <returns></returns>
 		public static int FibonacciAtIndexA(int desiredIndex)
 		{
 			double goldenRatio = 1.618034;
@@ -58,6 +63,11 @@ namespace Algorithms
 			return (int)result;
 		}
 
+		/// <summary>
+		/// returns the FibonacciSequence, with values less than highLimit, with a sequence starting at 0
+		/// </summary>
+		/// <param name="higLimnit"></param>
+		/// <returns></returns>
 		public static int[] FibonacciSequenceLessThan(int higLimnit)
 		{
 			double goldenRatio = 1.618034;
