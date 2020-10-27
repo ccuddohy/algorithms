@@ -95,6 +95,50 @@ namespace NUnitTestAlgorithm
 			calc = Algorithm.FibonacciAtIndexA(desIndex);
 			Assert.AreEqual(expect, calc);
 
+			desIndex = 21;
+			expect = 10946;
+			calc = Algorithm.FibonacciAtIndexA(desIndex);
+			Assert.AreEqual(expect, calc);
+
+		}
+
+		[Test]
+		public void TestFibonacciAtIndexB()
+		{
+			int desIndex = 5;
+			int expect = 5;
+			int calc = Algorithm.FibonacciAtIndexB(desIndex);
+			Assert.AreEqual(expect, calc);
+
+			desIndex = 7;
+			expect = 13;
+			calc = Algorithm.FibonacciAtIndexB(desIndex);
+			Assert.AreEqual(expect, calc);
+
+			desIndex = 10;
+			expect = 55;
+			calc = Algorithm.FibonacciAtIndexB(desIndex);
+			Assert.AreEqual(expect, calc);
+
+			desIndex = 0;
+			expect = 0;
+			calc = Algorithm.FibonacciAtIndexB(desIndex);
+			Assert.AreEqual(expect, calc);
+
+			desIndex = 1;
+			expect = 1;
+			calc = Algorithm.FibonacciAtIndexB(desIndex);
+			Assert.AreEqual(expect, calc);
+
+			desIndex = 2;
+			expect = 1;
+			calc = Algorithm.FibonacciAtIndexB(desIndex);
+			Assert.AreEqual(expect, calc);
+
+			desIndex = 21;
+			expect = 10946;
+			calc = Algorithm.FibonacciAtIndexB(desIndex);
+			Assert.AreEqual(expect, calc);
 		}
 
 		[Test]
@@ -103,7 +147,7 @@ namespace NUnitTestAlgorithm
 			int highLim = 90;
 			int[] sequence = Algorithm.FibonacciSequenceLessThan(highLim);
 			HashSet<int> terms = new HashSet<int>(sequence);
-			int[] expected = { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
+			int[] expected = { 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
 			Assert.AreEqual(expected, terms);
 
 

@@ -25,6 +25,8 @@ namespace Algorithms
 			HashSet<int> evenTerms = terms.Where(x => x % 2 == 0).ToHashSet();
 			int sum = evenTerms.Sum();
 
+
+
 		}
 	}
 }

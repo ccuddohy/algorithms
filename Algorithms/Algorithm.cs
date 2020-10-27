@@ -47,7 +47,8 @@ namespace Algorithms
 		}
 
 		/// <summary>
-		///  with a sequence starting at 0, returns the number at the zero based index input of the sequence
+		///  with a sequence starting at 0, returns the number at the zero based index input of the sequence. This 
+		///  function is using Binet's Formula and the Golden Ratio.
 		/// </summary>
 		/// <param name="desiredIndex"></param>
 		/// <returns></returns>
@@ -60,7 +61,23 @@ namespace Algorithms
 			double numerator = a - b;
 			double denominator = Math.Sqrt(5);
 			double result = numerator / denominator;
-			return (int)result;
+			return (int)Math.Round(result);
+		}
+
+		/// <summary>
+		/// with a sequence starting at 0, returns the number at the zero based index input of the sequence. This
+		/// function is using a simplified Binet Formula without the Golden Ratio
+		/// </summary>
+		/// <param name="desiredIndex"></param>
+		/// <returns></returns>
+		public static int FibonacciAtIndexB(int desiredIndex)
+		{
+			double sqRtOfFive = Math.Sqrt(5);//the square root of five
+			double numeratorStart = (1 + sqRtOfFive)/2;
+			double numeratorFull = Math.Pow(numeratorStart, desiredIndex);
+			double result_d = numeratorFull / sqRtOfFive;
+			//return (int)result_d;
+			return (int)Math.Round(result_d);
 		}
 
 		/// <summary>
